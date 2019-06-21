@@ -1,0 +1,53 @@
+//font
+$default-font: "roboto", sans-serif;
+
+//colors
+$base-color: #fff;
+$accent: #50e3c2;
+$accent-dark: #20c7a1;
+$danger: #FF0000;
+$primary: #434c6d;
+$info: #f8e81c;
+$text: #333;
+$base-text-color: $primary;
+
+//font-size
+$size-xxs: 12px;
+$size-xs: 14px;
+$size-m: 20px;
+$size-l: 24px;
+$size-xl: 26px;
+$size-xxl: 72px;
+
+
+// Body styles
+$base-font-Roboto: 'roboto', 'Arial', sans-serif;
+$font-Knewave: 'Knewave', $base-font-Roboto, cursive;
+$base-font-weight: 400;
+$base-font-family: $default-font;
+$base-background-color: $base-color;
+$base-font-size: 16px;
+$base-line-height: 2;
+$base-min-width: 320px;
+
+// Links styles
+$base-link-color: $base-color;
+$base-hover-link: #e84545;
+
+// Buttons styles
+$btn-color: $base-color;
+$btn-background: $base-color;
+$btn-padding: 0;
+$btn-font-size: inherit;
+
+
+
+
+
+//// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+//$grid-gutter-width: 30px;
+//$grid-columns: 12;
+//$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+//$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+//
+//$gutter: $grid-gutter-width;
