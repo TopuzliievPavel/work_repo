@@ -10,11 +10,11 @@
 
 // breakpoints for media
 $breakpoints: (
-	'xs-phone': 320px,
-	'phone': 480px,
-	'tablet': 768px,
-	'desktop': 1024px,
-	'widescreen': 1366px
+	"xs-phone": 320px,
+	"phone": 480px,
+	"tablet": 768px,
+	"desktop": 1024px,
+	"widescreen": 1366px
 );
 
 ::placeholder {
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6, p {
 	left: 0;
 	background-color: $accent;
 
-	&__inner {
+	&-wrap {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6, p {
 		justify-content: space-between;
 		padding: 0 50px;
 
-		@include media('<tablet') {
+		@include media("<tablet") {
 			padding: 10px 20px;
 		}
 	}
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6, p {
 	line-height: 0;
 	margin: 0 -10px;
 
-	@include media('<tablet') {
+	@include media("<tablet") {
 		display: block;
 		text-align: center;
 	}
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6, p {
 	text-transform: capitalize;
 	color: $primary;
 
-	@include media ('<desktop') {
+	@include media ("<desktop") {
 		font-size: $size-m;
 	}
 
@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .nav {
-	@include media('<tablet') {
+	@include media("<tablet") {
 		top: 70px;
 		width: 100%;
 		right: 100%;
@@ -167,15 +167,16 @@ h1, h2, h3, h4, h5, h6, p {
 	span,
 	&:after,
 	&:before {
-		content: '';
+		content: "";
 		position: absolute;
 		width: 20px;
 		height: 2px;
-		background-color: #fff;
-		border-radius: 3px;
 		top: 14px;
 		left: 50%;
 		transform: translateX(-50%);
+
+		background-color: #fff;
+		border-radius: 3px;
 		transition: all ease-in-out 0.3s;
 	}
 
@@ -204,12 +205,13 @@ h1, h2, h3, h4, h5, h6, p {
 		}
 	}
 
-	@include media('<tablet') {
+	@include media("<tablet") {
 		display: block;
 		position: relative;
 		height: 30px;
 		width: 30px;
 		z-index: 4;
+
 		background-color: $primary;
 		border-radius: 2px;
 	}
@@ -251,11 +253,12 @@ h1, h2, h3, h4, h5, h6, p {
 	.visual__inner {
 		max-width: 600px;
 		margin: 0 auto;
+
 		color: $base-color;
 		font-size: $size-xl;
 		line-height: 1.3;
 
-		@include media('<tablet') {
+		@include media("<tablet") {
 			width: 100%;
 			max-width: 100%;
 			margin: inherit;
@@ -264,15 +267,16 @@ h1, h2, h3, h4, h5, h6, p {
 
 	.visual__title {
 		text-transform: uppercase;
-		color: $info;
-		font-family: $font-Knewave;
 		margin-bottom: 20px;
 
-		@include media('<desktop') {
+		color: $info;
+		font-family: $font-Knewave;
+
+		@include media("<desktop") {
 			font-size: 44px;
 		}
 
-		@include media('<tablet') {
+		@include media("<tablet") {
 			font-size: 34px;
 		}
 	}
@@ -280,11 +284,11 @@ h1, h2, h3, h4, h5, h6, p {
 	p {
 		margin-bottom: 30px;
 
-		@include media('<desktop') {
+		@include media("<desktop") {
 			font-size: $size-m;
 		}
 
-		@include media('<tablet') {
+		@include media("<tablet") {
 			font-size: 16px;
 		}
 	}
@@ -293,26 +297,28 @@ h1, h2, h3, h4, h5, h6, p {
 .btn {
 	display: inline-block;
 	vertical-align: top;
-	text-transform: capitalize;
-	color: $base-color;
-	font-size: 18px;
-	border: solid 2px currentColor;
-	border-radius: 4px;
 	padding: 7px 15px;
-	line-height: 1.3;
-	transition: ease-in-out all .3s;
 	margin: 0 5px;
 
+	font-size: 18px;
+	line-height: 1.3;
+	color: $base-color;
+	text-transform: capitalize;
+	border: solid 2px currentColor;
+	border-radius: 4px;
+
+	transition: ease-in-out all .3s;
+
 	&:hover,
-	&:active,
-	&:focus {
+	&:focus,
+	&_active {
 		background-color: $info;
 		color: $primary;
 		border: solid 2px $info;
 		outline: 0;
 	}
 
-	@include media('<phone') {
+	@include media("<phone") {
 		display: block;
 		margin: 0 0 10px;
 
@@ -325,7 +331,7 @@ h1, h2, h3, h4, h5, h6, p {
 .about {
 	background-color: $primary;
 
-	&__inner {
+	&-wrap {
 		padding: 40px 0 60px;
 	}
 }
@@ -335,10 +341,10 @@ h1, h2, h3, h4, h5, h6, p {
 	margin-bottom: 30px;
 
 	.about__title {
-		color: $accent;
-		font-family: $font-Knewave;
-		text-transform: uppercase;
 		font-size: $h1-basic-font-size;
+		font-family: $font-Knewave;
+		color: $accent;
+		text-transform: uppercase;
 	}
 }
 
@@ -351,26 +357,27 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .content {
+	width: 25%;
+
 	text-align: center;
 	font-size: $base-font-size;
 	line-height: 1.3;
-	width: 25%;
 
-	@include media('<desktop') {
+	@include media("<desktop") {
 		width: 50%;
 		margin-bottom: 40px;
 	}
 
-	@include media('<tablet') {
+	@include media("<tablet") {
 		width: 100%;
 	}
 
 	&__inner {
-		padding: 0 20px;
-		height: 100%;
+		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		display: flex;
+		padding: 0 20px;
+		height: 100%;
 
 		&:hover {
 			.content__title {
@@ -394,11 +401,13 @@ h1, h2, h3, h4, h5, h6, p {
 	}
 	
 	&__title {
+		position: relative;
+		padding-bottom: 30px;
+
 		color: $accent;
 		font-family: $font-Knewave;
 		font-size: $size-l;
-		position: relative;
-		padding-bottom: 30px;
+
 		transition: all ease .5s;
 
 		&:after {
@@ -406,10 +415,11 @@ h1, h2, h3, h4, h5, h6, p {
 			position: absolute;
 			width: 65%;
 			height: 2px;
-			background-color: $accent;
 			left: 50%;
 			bottom: 0;
 			transform: translateX(-50%);
+
+			background-color: $accent;
 			transition: all ease .5s;
 		}
 	}
@@ -426,6 +436,21 @@ h1, h2, h3, h4, h5, h6, p {
 		margin: 0;
 	}
 }
+
+.software__title {
+	display: none;
+	vertical-align: top;
+
+	padding: 10px 30px;
+
+	font-size: $size-xxl;
+	font-family: $font-Knewave;
+	color: $primary;
+
+	background-color: $info;
+	text-transform: uppercase;
+}
+
 // ------------------ contact ----------------
 .contact {
 	background-color: $accent;
@@ -442,7 +467,7 @@ h1, h2, h3, h4, h5, h6, p {
 	flex-wrap: wrap;
 	justify-content: space-around;
 
-	@include media('<desktop') {
+	@include media("<desktop") {
 		margin: 0;
 	}
 }
@@ -450,7 +475,7 @@ h1, h2, h3, h4, h5, h6, p {
 .contact-box {
 	width: 50%;
 
-	@include media('<desktop') {
+	@include media("<desktop") {
 		width: 100%;
 		margin-bottom: 30px;
 	}
@@ -458,7 +483,7 @@ h1, h2, h3, h4, h5, h6, p {
 	&__head {
 		margin-bottom: 20px;
 
-		@include media('<desktop') {
+		@include media("<desktop") {
 			text-align: center;
 		}
 
@@ -473,7 +498,7 @@ h1, h2, h3, h4, h5, h6, p {
 		font-size: $size-m;
 		text-transform: uppercase;
 
-		@include media('<tablet') {
+		@include media("<tablet") {
 			font-size: 16px;
 		}
 	}
@@ -481,7 +506,7 @@ h1, h2, h3, h4, h5, h6, p {
 	&:first-child {
 		padding-right: 40px;
 
-		@include media('<desktop') {
+		@include media("<desktop") {
 			padding: 0;
 		}
 	}
@@ -503,7 +528,7 @@ h1, h2, h3, h4, h5, h6, p {
 		color: $primary;
 
 		&:before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 50%;
 			left: 0;
@@ -530,7 +555,7 @@ h1, h2, h3, h4, h5, h6, p {
 	&__item {
 		text-transform: capitalize;
 		&:nth-child(odd) {
-			font-family: 'robotoBold';
+			font-family: "robotoBold";
 		}
 	}
 }
@@ -539,41 +564,48 @@ h1, h2, h3, h4, h5, h6, p {
 	display: flex;
 	flex-wrap: wrap;
 
-	@include media('<desktop') {
+	@include media("<desktop") {
 		max-width: 600px;
 		margin: 0 auto;
 	}
 
-	@include media('<tablet') {
+	@include media("<tablet") {
 		max-width: 450px;
 		margin: 0 auto;
 	}
 
 	&__input {
-		font-size: $size-l;
 		padding: 10px 20px;
+
+		font-size: $size-l;
 		background: transparent;
 		border: solid 2px currentColor;
-		text-transform: capitalize;
 		border-right: transparent;
 		color: $primary;
 
-		@include media('<tablet') {
-			font-size: $size-xs;
+		@include media("<tablet") {
 			padding: 5px 10px;
+			font-size: $size-xs;
 		}
 	}
 
-	input[type='text'] {
-		border-radius: 5px 0 0 5px;
+	input[type="text"] {
 		flex-grow: 1;
+		border-radius: 5px 0 0 5px;
+		background: transparent;
 
 		&::placeholder {
 			color: $primary;
 		}
+
+		&:focus {
+			&::placeholder {
+				color: transparent;
+			}
+		}
 	}
 
-	input[type='submit'] {
+	input[type="submit"] {
 		border-radius: 0 5px 5px 0;
 		flex-shrink: 0;
 	}
@@ -581,56 +613,62 @@ h1, h2, h3, h4, h5, h6, p {
 	&__btn {
 		padding: 5px 15px;
 		text-transform: capitalize;
+		margin: 0;
+		color: $primary;
 		border: solid 2px currentColor;
 		background-color: transparent;
+		font-family: "robotoMedium";
 		transition: .3s all ease-in-out;
-		font-family: 'robotoMedium';
 
 		&:hover,
 		&:focus,
-		&:active {
+		&.btn_active {
 			background-color: $info;
 			border-color: $info;
 		}
 
-		@include media('<tablet') {
+		@include media("<tablet") {
 			font-size: $size-xs;
 		}
 	}
 }
-//------------------------ footer ---------------
+
+//------------------- footer ---------------
 .footer {
 	background-color: $accent-dark;
 	padding: 20px 0;
 
-	&__inner {
+	&-wrap {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		align-items: center;
 
-		@include media('<phone') {
+		@include media("<phone") {
 			display: block;
 			text-align: center;
 		}
 	}
 
 	&__list {
+		margin: 0 -10px;
+
 		font-size: 0;
 		line-height: 0;
-		margin: 0 -10px;
 	}
 
 	&__item {
 		display: inline-block;
 		vertical-align: top;
+		margin: 0 10px;
+
 		font-size: 16px;
 		line-height: 1.3;
-		margin: 0 10px;
 	}
 
 	&__link {
 		display: block;
+
 		background: $primary;
 		border-radius: 50%;
 		text-align: center;
@@ -643,16 +681,18 @@ h1, h2, h3, h4, h5, h6, p {
 
 	&__text {
 		font-size: $size-xs;
-		@include media('<phone') {
+
+		@include media("<phone") {
 			margin-bottom: 20px;
 		}
 	}
 
 	.fas,
 	.fab {
-		line-height: 42px;
 		width: 42px;
 		height: 42px;
+
+		line-height: 42px;
 		color: #20c7a1;
 
 		&:hover {
@@ -663,12 +703,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 
-
-
 // ------------------- styles for content.html ----------------
-.description {
-	font-size: $size-m;
+.software {
 	padding-bottom: 80px;
+	font-size: $size-m;
 
 	&__inner {
 		line-height: 0;
@@ -684,10 +722,11 @@ h1, h2, h3, h4, h5, h6, p {
 		display: inline-block;
 		vertical-align: top;
 		width: 65%;
+
 		font-size: $size-m;
 		line-height: 1.3;
 
-		@include media('<desktop') {
+		@include media("<desktop") {
 			display: block;
 			width: 100%;
 		}
@@ -709,36 +748,41 @@ figcaption {
 .aside {
 	@include clearfix;
 
-	background-color: $primary;
-	padding: 40px 40px;
-	color: $base-color;
 	display: inline-block;
 	vertical-align: top;
 	width: 35%;
-	line-height: 1.3;
-	font-size: $base-font-size;
-	margin-top: 10px;
 	position: sticky;
 	top: 0;
+	padding: 40px 40px;
+	margin-top: 10px;
+
+	font-size: $base-font-size;
+	line-height: 1.3;
+	color: $base-color;
+
+	background-color: $primary;
+	box-shadow: 0 2px 20px 6px rgba(0,0,0,0.3);
+
 
 	&__head {
 		margin-bottom: 30px;
 	}
 
 	&__title {
-		font-family: 'Knewave';
+		font-family: "Knewave";
 		font-size: 28px;
 		text-transform: uppercase;
 	}
 
 	&__text {
-		font-size: 15px;
-		line-height: 1.3;
 		position: relative;
 		padding-left: 20px;
 
+		font-size: 15px;
+		line-height: 1.3;
+
 		&:before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 50%;
 			left: 0;
@@ -754,13 +798,13 @@ figcaption {
 	}
 
 	&__author {
-		color: $info;
 		float: right;
 		font-size: $size-xxs;
-		font-family: 'robotoBold';
+		font-family: "robotoBold";
+		color: $info;
 	}
 
-	@include media('<desktop') {
+	@include media("<desktop") {
 		display: block;
 		width: 100%;
 		position: static;
@@ -768,6 +812,4 @@ figcaption {
 }
 
 
-
-
-@import "media"; // Always at the end
+//@import "media"; // Always at the end

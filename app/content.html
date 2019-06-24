@@ -38,7 +38,7 @@
 
   <header class="header">
 
-    <div class="header__inner">
+    <div class="header-wrap">
       <div class="navigation-menu">
 
         <a class="menu-open" href="#" >
@@ -48,10 +48,10 @@
         <nav class="nav">
           <ul class="menu">
             <li class="menu__item">
-              <a href="#" class="menu__link ">Over ons</a>
+              <a href="index.html" class="menu__link ">Over ons</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Gratis software</a>
+              <a href="#software" target="_self" class="menu__link">Gratis software</a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">Show case</a>
@@ -80,7 +80,7 @@
         <div class="visual__inner">
           <h1 class="visual__title">Lorem ipsum dolor sit amet</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus 						accusantium ad, aliquam amet assumenda atque autem cumque debitis, earum est 						ipsa labore non praesentium quidem repudiandae tempore voluptates? Molestias, 						tempore, voluptatem.</p>
-          <a href="#" class="btn">Download</a>
+          <a href="#" class="btn btn_active">Download</a>
           <a href="#" class="btn">Meer informatie</a>
         </div>
       </div>
@@ -88,10 +88,11 @@
   </div>
 
   <main class="main-content">
-    <section class="description">
+    <section id="software" class="software">
       <div class="container">
-          <div class="description__inner">
-            <div class="description__box">
+          <div class="software__inner">
+            <div class="software__box">
+              <h2 class="software__title"></h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate ea eligendi laborum libero maxime nihil numquam placeat totam ullam! Beatae, explicabo, minima! Assumenda et molestiae omnis quam omnis quam</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate ea eligendi laborum libero maxime nihil numquam placeat totam ullam! Beatae, explicabo, minima! Assumenda et molestiae omnis quam omnis quam</p>
 
@@ -124,11 +125,11 @@
 
           <div class="contact-box">
             <div class="contact-box__head">
-              <h6 class="contact-box__title">Text in the input must be show in the 								content page</h6>
+              <h6 class="contact-box__title">Text in the input must be show in the	content page</h6>
             </div>
-            <form action="#" method="post" class="form">
+            <form action="#" class="form" target="_self">
               <input type="text" class="form__input" placeholder="Some text">
-              <input type="submit" class="form__btn" value="Send">
+              <input onclick="initText()" type="submit" class="form__btn btn_active" value="Send">
             </form>
           </div>
 
@@ -165,16 +166,11 @@
       </div>
     </section>
 
-
-
   </main>
-
-
-
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__inner">
+      <div class="footer-wrap">
         <div class="footer__text">
           <p>Some long text about copyright</p>
         </div>
