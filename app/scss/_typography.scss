@@ -1,0 +1,48 @@
+// Heading font-size
+$h1-basic-font-size: 72px;
+$h2-basic-font-size: 64px;
+$h3-basic-font-size: 28px;
+$h4-basic-font-size: 24px;
+$h5-basic-font-size: 20px; //1rem must be always
+$h6-basic-font-size: 16px; // 16px
+
+h1, .h1 ,h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: $font-Knewave;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+html {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1 {
+  font-size: $h1-basic-font-size;
+  color: $info;
+}
+
+h2{
+  font-size: $h2-basic-font-size;
+  color: $accent;
+}
+
+h3 {
+  font-size: $h3-basic-font-size;
+}
+
+h4 {
+  font-size: $h4-basic-font-size;
+}
+
+h5 {
+  font-size: $h5-basic-font-size;
+}
+
+h6 {
+  font-size: $h6-basic-font-size;
+}
+
+p {
+  margin-bottom: 1em;
+}

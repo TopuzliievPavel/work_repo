@@ -1,9 +1,7 @@
 @import "vars";
 @import "fonts";
-@import "libs";
-@import "heading-styles";
+@import "typography";
 @import "normalize";
-@import "reset";
 @import "_mixins/mixins";
 @import "include-media";
 
@@ -17,43 +15,10 @@ $breakpoints: (
 	"widescreen": 1366px
 );
 
-::placeholder {
-	color: #666;
-}
-
-::selection {
-	background-color: $accent;
-	color: #fff;
-}
-
-html {
-	height: 100%;
-}
-
 body {
-	font: #{$base-font-size}/#{$base-line-height} $default-font;
-	font-weight: $base-font-weight;
-	font-size: 16px;
+	font-family: $default-font;
 	min-width: $base-min-width;
-	position: relative;
-	overflow-x: hidden;
 	color: $base-text-color;
-	background: $base-background-color;
-
-	input, textarea {
-		border: #666 1px solid;
-		outline: none;
-		&:focus:required:invalid {
-			border-color: red;
-		}
-		&:required:valid {
-			border-color: green;
-		}
-	}
-}
-
-h1, h2, h3, h4, h5, h6, p {
-	margin: 0;
 }
 
 .container {
@@ -62,13 +27,11 @@ h1, h2, h3, h4, h5, h6, p {
 	padding: 0 15px;
 }
 
-#wrapper {
-	position: relative;
-	width: 100%;
-	//overflow: hidden;
-}
-
 .header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
 	position: absolute;
 	width: 100%;
 	z-index: 9999;
@@ -76,93 +39,87 @@ h1, h2, h3, h4, h5, h6, p {
 	left: 0;
 	background-color: $accent;
 
-	&-wrap {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
+	@include media(">=tablet") {
 		padding: 0 50px;
-
-		@include media("<tablet") {
-			padding: 10px 20px;
-		}
 	}
 }
 
-.menu {
-	font-size: 0;
-	line-height: 0;
-	margin: 0 -10px;
-
-	@include media("<tablet") {
+.logo {
+	a {
 		display: block;
-		text-align: center;
+	}
+}
+
+.content-header {
+	position: relative;
+}
+
+.menu {
+	text-align: center;
+
+	@include media(">=tablet") {
+		display: flex;
+		align-items: center;
 	}
 }
 
 .menu__item {
-	display: inline-block;
-	vertical-align: top;
-	line-height: 1.6;
 	padding: 15px 10px;
-	font-size: $size-l;
+	font-size: $size-m;
 	text-transform: capitalize;
-	color: $primary;
+	color: $base-color;
 
-	@include media ("<desktop") {
-		font-size: $size-m;
+	@include media (">=tablet") {
+		font-size: $size-l;
+		color: $primary;
 	}
+}
 
-	@include media ('<tablet') {
-		font-size: 16px;
-		display: block;
-		color: $base-color;
-	}
+.menu__item_active {
+	color: $danger;
+}
 
-	&.menu__item_active {
+.menu__link {
+	color: inherit;
+	transition: color .3s;
+	display: block;
+
+	&:focus,
+	&:hover {
 		color: $danger;
-	}
-
-	a {
-		color: inherit;
-		transition: all .3s ease-in-out;
-		display: block;
-
-		&:focus {
-			outline: 0;
-			color: $danger;
-		}
-
-		&:hover {
-			color: $danger;
-		}
 	}
 }
 
 .nav {
-	@include media("<tablet") {
-		top: 70px;
-		width: 100%;
-		right: 100%;
-		position: absolute;
-		background-color: #000;
-		transition: all 1s ease;
-		height: 100vh;
+	top: 85px;
+	width: 100%;
+	right: 100%;
+	position: absolute;
+	background-color: #000;
+	transition: right .3s;
+	height: 100vh;
 
-		.menu-active & {
-			opacity: 0.8;
-			right: 0;
-		}
+	.menu-active & {
+		opacity: .7;
+		right: 0;
+	}
+
+	@include media(">=tablet") {
+		position: static;
+		height: auto;
+		background-color: transparent;
 	}
 }
 
 .menu-open {
-	display: none;
+	display: block;
+	position: relative;
+	height: 30px;
+	width: 30px;
+	z-index: 4;
 
-	&:hover {
-		background-color: $primary;
-	}
+	background-color: $primary;
+	border: none;
 
 	span,
 	&:after,
@@ -177,7 +134,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 		background-color: #fff;
 		border-radius: 3px;
-		transition: all ease-in-out 0.3s;
+		transition: ease-in-out .3s;
 	}
 
 	&:before {
@@ -205,93 +162,55 @@ h1, h2, h3, h4, h5, h6, p {
 		}
 	}
 
-	@include media("<tablet") {
-		display: block;
-		position: relative;
-		height: 30px;
-		width: 30px;
-		z-index: 4;
-
-		background-color: $primary;
-		border-radius: 2px;
+	@include media(">=tablet") {
+		display: none;
 	}
 }
 
+
+
 // ----------------	visual ---------------
 .visual {
+	display: flex;
+	align-items: center;
+	height: 100vh;
 	background: url("../img/_src/slide.jpg");
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	min-height: 100vh;
-	white-space: nowrap;
-	width: 100%;
-	padding: 80px 0;
-	overflow: hidden;
 
-	&:before {
-		content: "";
-		min-height: calc(100vh - 160px);
-		display: inline-block;
-		vertical-align: middle;
-		width: 0;
-		opacity: 0;
-		visibility: hidden;
-	}
-
-	> * {
-		white-space: normal;
-	}
-
-	.visual-wrap {
-		display: inline-block;
-		vertical-align: middle;
-		width: 100%;
-		text-align: center;
-	}
-
-	.visual__inner {
-		max-width: 600px;
-		margin: 0 auto;
-
-		color: $base-color;
-		font-size: $size-xl;
-		line-height: 1.3;
-
-		@include media("<tablet") {
-			width: 100%;
-			max-width: 100%;
-			margin: inherit;
-		}
-	}
-
-	.visual__title {
-		text-transform: uppercase;
-		margin-bottom: 20px;
-
-		color: $info;
-		font-family: $font-Knewave;
-
-		@include media("<desktop") {
-			font-size: 44px;
-		}
-
-		@include media("<tablet") {
-			font-size: 34px;
-		}
-	}
+	text-align: center;
+	color: $base-color;
+	font-size: $size-xl;
+	line-height: 1.3;
 
 	p {
-		margin-bottom: 30px;
+		margin-bottom: 40px;
+		font-size: 16px;
 
-		@include media("<desktop") {
+		@include media(">=desktop") {
 			font-size: $size-m;
 		}
-
-		@include media("<tablet") {
-			font-size: 16px;
-		}
 	}
+}
+
+.visual__inner {
+	max-width: 750px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.visual__title {
+	margin-bottom: 20px;
+	font-size: 34px;
+
+	@include media(">=desktop") {
+		font-size: 44px;
+	}
+
+	@include media(">=widescreen") {
+		 font-size: $h1-basic-font-size;
+	 }
 }
 
 .btn {
@@ -327,7 +246,11 @@ h1, h2, h3, h4, h5, h6, p {
 		//}
 	}
 }
-// --------------- about -----------------
+
+main {
+  flex: 1 0 auto;
+}
+// --------------- about -----------------`
 .about {
 	background-color: $primary;
 
@@ -345,22 +268,29 @@ h1, h2, h3, h4, h5, h6, p {
 		font-family: $font-Knewave;
 		color: $accent;
 		text-transform: uppercase;
+
+  @include media("<desktop") {
+      font-size: 40px;
+    }
+
+    @include media("<tablet") {
+      font-size: $size-xl;
+    }
 	}
 }
 
 .about-content {
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
+	flex-direction: row;
 	justify-content: space-between;
-	//align-items: stretch;
 }
 
 .content {
 	width: 25%;
 
 	text-align: center;
-	font-size: $base-font-size;
+	font-size: $default-font;
 	line-height: 1.3;
 
 	@include media("<desktop") {
@@ -375,24 +305,17 @@ h1, h2, h3, h4, h5, h6, p {
 	&__inner {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		padding: 0 20px;
+		padding: 0 15px;
 		height: 100%;
 
-		&:hover {
-			.content__title {
-				color: #fff;
-
-				&:after {
-					width: 0;
-				}
-			}
-		}
+    @include media("<tablet") {
+      display: block;
+    }
 	}
 
 	&__img {
 		margin-bottom: 50px;
-		flex: 1;
+    min-height: 125px;
 	}
 	
 	&__head {
@@ -422,18 +345,31 @@ h1, h2, h3, h4, h5, h6, p {
 			background-color: $accent;
 			transition: all ease .5s;
 		}
+
+    @include media("<tablet") {
+      font-size: $size-m;
+    }
 	}
 	
 	&__text {
 		color: $base-color;
 		margin-bottom: 20px;
 		line-height: $base-line-height;
-		flex: 1;
+		flex: 1 0 auto;
+
+    @include media("<tablet") {
+      font-size: $size-xs;
+    }
 	}
 
 	&__btn {
 		font-size: $size-xs;
 		margin: 0;
+		flex: 0 0 auto;
+
+    @include media("<tablet") {
+
+    }
 	}
 }
 
@@ -583,6 +519,10 @@ h1, h2, h3, h4, h5, h6, p {
 		border-right: transparent;
 		color: $primary;
 
+    @supports not (border-right: $primary) {
+      border-right: solid 2px;
+    }
+
 		@include media("<tablet") {
 			padding: 5px 10px;
 			font-size: $size-xs;
@@ -625,6 +565,7 @@ h1, h2, h3, h4, h5, h6, p {
 		&.btn_active {
 			background-color: $info;
 			border-color: $info;
+      padding: 5px 15px;
 		}
 
 		@include media("<tablet") {
@@ -637,6 +578,7 @@ h1, h2, h3, h4, h5, h6, p {
 .footer {
 	background-color: $accent-dark;
 	padding: 20px 0;
+  flex: 0 0 auto;
 
 	&-wrap {
 		display: flex;
@@ -694,6 +636,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 		line-height: 42px;
 		color: #20c7a1;
+    text-rendering: optimizeLegibility; //hack for the safary
 
 		&:hover {
 			color: $primary;
@@ -709,8 +652,10 @@ h1, h2, h3, h4, h5, h6, p {
 	font-size: $size-m;
 
 	&__inner {
-		line-height: 0;
-		font-size: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
 	}
 
 	p {
@@ -719,8 +664,6 @@ h1, h2, h3, h4, h5, h6, p {
 	}
 
 	&__box {
-		display: inline-block;
-		vertical-align: top;
 		width: 65%;
 
 		font-size: $size-m;
@@ -729,7 +672,12 @@ h1, h2, h3, h4, h5, h6, p {
 		@include media("<desktop") {
 			display: block;
 			width: 100%;
+      font-size: $base-font-size;
 		}
+
+    @include  media("<tablet") {
+      text-align: justify;
+    }
 	}
 }
 
@@ -746,13 +694,7 @@ figcaption {
 }
 
 .aside {
-	@include clearfix;
-
-	display: inline-block;
-	vertical-align: top;
-	width: 35%;
-	position: sticky;
-	top: 0;
+  width: 35%;
 	padding: 40px 40px;
 	margin-top: 10px;
 
@@ -761,17 +703,20 @@ figcaption {
 	color: $base-color;
 
 	background-color: $primary;
-	box-shadow: 0 2px 20px 6px rgba(0,0,0,0.3);
-
+	box-shadow: 0 2px 20px 6px rgba(#000, .3);
 
 	&__head {
 		margin-bottom: 30px;
 	}
 
 	&__title {
-		font-family: "Knewave";
+		font-family: $font-Knewave;
 		font-size: 28px;
 		text-transform: uppercase;
+
+    @include media("<tablet") {
+      font-size: $size-m;
+    }
 	}
 
 	&__text {
@@ -810,6 +755,3 @@ figcaption {
 		position: static;
 	}
 }
-
-
-//@import "media"; // Always at the end

@@ -6,3 +6,14 @@
 @include font-face("robotoMedium", "../fonts/Roboto/RobotoMedium/RobotoMedium", 500);
 @include font-face("robotoBold", "../fonts/Roboto/RobotoBold/RobotoBold", bold);
 @include font-face("robotoBlack", "../fonts/Roboto/RobotoBlack/RobotoBlack", 900);
+@include font-face("knewaveRegular", "../fonts/Knewave/knewaveRegular/knewaveRegular");
+
+
+
+@font-face {
+  font-family: 'knewaveRegular';
+  src: url('../fonts/Knewave/knewaveRegular.woff2') format('woff2'),
+  url('../fonts/Knewave/knewaveRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
