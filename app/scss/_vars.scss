@@ -1,11 +1,11 @@
 //colors
 $base-color: #fff;
+$dark-color: #000;
 $accent: #50e3c2;
 $accent-dark: #20c7a1;
 $danger: #FF0000;
 $primary: #434c6d;
 $info: #f8e81c;
-$text: #333;
 $base-text-color: $primary;
 
 //font-size
@@ -18,7 +18,7 @@ $size-xxl: 72px;
 
 // Body styles
 $default-font: "roboto", "Arial", sans-serif;
-$font-Knewave: "knewaveRegular", "roboto", cursive;
+$font-Knewave: "knewaveRegular", "Arial", cursive;
 $base-font-weight: 400;
 $base-font-family: $default-font;
 $base-background-color: $base-color;

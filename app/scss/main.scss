@@ -1,7 +1,7 @@
 @import "vars";
 @import "fonts";
-@import "typography";
 @import "normalize";
+@import "typography";
 @import "_mixins/mixins";
 @import "include-media";
 
@@ -14,6 +14,11 @@ $breakpoints: (
 	"desktop": 1024px,
 	"widescreen": 1366px
 );
+
+html {
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+}
 
 body {
 	font-family: $default-font;
@@ -50,10 +55,6 @@ body {
 	}
 }
 
-.content-header {
-	position: relative;
-}
-
 .menu {
 	text-align: center;
 
@@ -64,7 +65,7 @@ body {
 }
 
 .menu__item {
-	padding: 15px 10px;
+	padding: 15px 0;
 	font-size: $size-m;
 	text-transform: capitalize;
 	color: $base-color;
@@ -72,6 +73,7 @@ body {
 	@include media (">=tablet") {
 		font-size: $size-l;
 		color: $primary;
+		padding: 15px 10px;
 	}
 }
 
@@ -91,7 +93,7 @@ body {
 }
 
 .nav {
-	top: 85px;
+	top: 83px;
 	width: 100%;
 	right: 100%;
 	position: absolute;
@@ -100,7 +102,7 @@ body {
 	height: 100vh;
 
 	.menu-active & {
-		opacity: .7;
+		opacity: .9;
 		right: 0;
 	}
 
@@ -134,7 +136,7 @@ body {
 
 		background-color: #fff;
 		border-radius: 3px;
-		transition: ease-in-out .3s;
+		transition: transform .3s;
 	}
 
 	&:before {
@@ -167,11 +169,10 @@ body {
 	}
 }
 
-
-
 // ----------------	visual ---------------
 .visual {
 	display: flex;
+	position: relative;
 	align-items: center;
 	height: 100vh;
 	background: url("../img/_src/slide.jpg");
@@ -180,17 +181,48 @@ body {
 	background-repeat: no-repeat;
 
 	text-align: center;
-	color: $base-color;
-	font-size: $size-xl;
 	line-height: 1.3;
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background-color: $dark-color;
+		opacity: .4;
+	}
 
 	p {
 		margin-bottom: 40px;
 		font-size: 16px;
+		line-height: 1.3;
+		color: $base-color;
 
-		@include media(">=desktop") {
+		@include media(">=tablet") {
 			font-size: $size-m;
 		}
+
+		@include media(">=desktop") {
+			font-size: $size-l;
+		}
+
+		@include media(">=widescreen") {
+			font-size: $size-xl;
+		}
+	}
+
+	@include supports(display, flex){
+		display: inline;
+	}
+
+}
+
+@supports not (display: flex) {
+	.visual {
+		display: block;
 	}
 }
 
@@ -198,10 +230,10 @@ body {
 	max-width: 750px;
 	margin: 0 auto;
 	padding: 0 15px;
+	z-index: 1;
 }
 
 .visual__title {
-	margin-bottom: 20px;
 	font-size: 34px;
 
 	@include media(">=desktop") {
@@ -209,16 +241,14 @@ body {
 	}
 
 	@include media(">=widescreen") {
-		 font-size: $h1-basic-font-size;
-	 }
+		font-size: $h1-basic-font-size;
+	}
 }
 
 .btn {
-	display: inline-block;
-	vertical-align: top;
+	display: block;
 	padding: 7px 15px;
-	margin: 0 5px;
-
+	margin-bottom: 10px;
 	font-size: 18px;
 	line-height: 1.3;
 	color: $base-color;
@@ -226,311 +256,185 @@ body {
 	border: solid 2px currentColor;
 	border-radius: 4px;
 
-	transition: ease-in-out all .3s;
+	transition: background-color .3s,
+							color .3s;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	&:hover,
 	&:focus,
-	&_active {
-		background-color: $info;
+	&.btn_active {
 		color: $primary;
-		border: solid 2px $info;
+		border: solid 2px rgba(250,237,97,1);
 		outline: 0;
+
+		// linear gradient
+		background-color: rgba(250,237,97,1);
+		background: (linear-gradient(top, rgba(250,237,97,1) 0%, rgba(255,241,89,1) 21%, 								rgba(255,236,23,1) 51%, rgba(250,238,105,1) 100%));
 	}
 
-	@include media("<phone") {
-		display: block;
-		margin: 0 0 10px;
-
-		//&:last-child {
-		//	margin-bottom: 0;
-		//}
+	@include media(">=tablet") {
+		width: auto;
+		display: inline-block;
+		vertical-align: top;
 	}
 }
 
-main {
+.visual__btn {
+	width: 100%;
+	@include media(">=tablet") {
+		width: auto;
+		margin: 0 5px;
+	}
+}
+
+// ---------------- main -----------------
+.page-main {
   flex: 1 0 auto;
 }
+
 // --------------- about -----------------`
 .about {
 	background-color: $primary;
+	padding: 20px 0 20px;
 
-	&-wrap {
-		padding: 40px 0 60px;
+	@include media(">=widescreen") {
+		padding: 40px 0 80px;
 	}
 }
 
-.about__header {
+.about__title {
+	font-size: $size-xl;
 	text-align: center;
-	margin-bottom: 30px;
 
-	.about__title {
-		font-size: $h1-basic-font-size;
-		font-family: $font-Knewave;
-		color: $accent;
-		text-transform: uppercase;
+	@include media(">=tablet") {
+		font-size: 40px;
+	}
 
-  @include media("<desktop") {
-      font-size: 40px;
-    }
-
-    @include media("<tablet") {
-      font-size: $size-xl;
-    }
+	@include media(">=widescreen") {
+		font-size: $h2-basic-font-size;
 	}
 }
 
-.about-content {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-between;
+.about__list {
+	@include media(">=tablet") {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
-.content {
-	width: 25%;
-
+.about-info {
+	margin-bottom: 50px;
 	text-align: center;
-	font-size: $default-font;
-	line-height: 1.3;
 
-	@include media("<desktop") {
-		width: 50%;
-		margin-bottom: 40px;
-	}
-
-	@include media("<tablet") {
-		width: 100%;
-	}
-
-	&__inner {
+	@include media(">=tablet") {
 		display: flex;
 		flex-direction: column;
-		padding: 0 15px;
-		height: 100%;
-
-    @include media("<tablet") {
-      display: block;
-    }
+		width: 50%;
+		padding: 0 20px;
 	}
 
-	&__img {
-		margin-bottom: 50px;
-    min-height: 125px;
-	}
-	
-	&__head {
-		margin-bottom: 20px;
-		text-transform: uppercase;
-	}
-	
-	&__title {
-		position: relative;
-		padding-bottom: 30px;
-
-		color: $accent;
-		font-family: $font-Knewave;
-		font-size: $size-l;
-
-		transition: all ease .5s;
-
-		&:after {
-			content: '';
-			position: absolute;
-			width: 65%;
-			height: 2px;
-			left: 50%;
-			bottom: 0;
-			transform: translateX(-50%);
-
-			background-color: $accent;
-			transition: all ease .5s;
-		}
-
-    @include media("<tablet") {
-      font-size: $size-m;
-    }
-	}
-	
-	&__text {
-		color: $base-color;
-		margin-bottom: 20px;
-		line-height: $base-line-height;
-		flex: 1 0 auto;
-
-    @include media("<tablet") {
-      font-size: $size-xs;
-    }
-	}
-
-	&__btn {
-		font-size: $size-xs;
-		margin: 0;
-		flex: 0 0 auto;
-
-    @include media("<tablet") {
-
-    }
+	@include media(">=widescreen") {
+		width: 25%;
+		margin-bottom: 0;
 	}
 }
 
-.software__title {
-	display: none;
-	vertical-align: top;
+.about-info__text {
+	flex: 1 0 auto;
 
-	padding: 10px 30px;
+	p {
+		font-size: 16px;
+		color: $base-color;
+	}
+}
 
-	font-size: $size-xxl;
-	font-family: $font-Knewave;
-	color: $primary;
+.about-info__title {
+	position: relative;
+	padding-bottom: 20px;
 
-	background-color: $info;
-	text-transform: uppercase;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 65%;
+		height: 2px;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+
+		background-color: $accent;
+	}
+}
+
+.about-info__img {
+	min-height: 135px;
+	margin-bottom: 20px;
+
+	@include media(">=tablet") {
+		margin-bottom: 40px;
+	}
+}
+
+.about-info__btn {
+	flex: 0 0 auto;
+
+	@include media(">=tablet") {
+		margin: 0 15%;
+	}
 }
 
 // ------------------ contact ----------------
 .contact {
 	background-color: $accent;
 	padding: 30px 0 50px;
+}
 
-	&__inner {
-		display: flex;
-		flex-wrap: wrap;
+.contact-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.contact-box {
+	margin-bottom: 30px;
+	width: 100%;
+	text-align: center;
+
+	@include media(">=desktop") {
+		width: 50%;
+		text-align: left;
+		margin-bottom: 0;
 	}
 }
 
 .contact-box_modify {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	text-align: left;
+	margin-bottom: 0;
 
-	@include media("<desktop") {
-		margin: 0;
+	@media screen and ("min-width: 525px") {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 }
 
-.contact-box {
-	width: 50%;
+.contact-box__title {
+	font-size: 16px;
 
-	@include media("<desktop") {
-		width: 100%;
-		margin-bottom: 30px;
-	}
-
-	&__head {
-		margin-bottom: 20px;
-
-		@include media("<desktop") {
-			text-align: center;
-		}
-
-		@include media('<tablet') {
-			margin-bottom: 10px;
-			line-height: 1.3;
-		}
-	}
-
-	&__title {
-		font-family: $font-Knewave;
+	@include media(">=tablet") {
 		font-size: $size-m;
-		text-transform: uppercase;
-
-		@include media("<tablet") {
-			font-size: 16px;
-		}
-	}
-
-	&:first-child {
-		padding-right: 40px;
-
-		@include media("<desktop") {
-			padding: 0;
-		}
-	}
-
-	&__community,
-	&__address {
-		padding: 0 10px;
-	}
-
-	&__community {
-		margin-bottom: 30px;
-	}
-}
-
-.contact-community {
-	&__item {
-		font-size: 16px;
-		position: relative;
-		color: $primary;
-
-		&:before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			border-top: 4px solid transparent;
-			border-left: 6px solid $primary;
-			border-bottom: 4px solid transparent;
-		}
-	}
-
-	&__link {
-		margin-left: 20px;
-		transition: all ease .3s;
-
-		&:hover,
-		&:focus,
-		&:active {
-			color: $info;
-		}
-	}
-}
-
-.contact-list {
-	&__item {
-		text-transform: capitalize;
-		&:nth-child(odd) {
-			font-family: "robotoBold";
-		}
 	}
 }
 
 .form {
 	display: flex;
-	flex-wrap: wrap;
-
-	@include media("<desktop") {
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	@include media("<tablet") {
-		max-width: 450px;
-		margin: 0 auto;
-	}
-
-	&__input {
-		padding: 10px 20px;
-
-		font-size: $size-l;
-		background: transparent;
-		border: solid 2px currentColor;
-		border-right: transparent;
-		color: $primary;
-
-    @supports not (border-right: $primary) {
-      border-right: solid 2px;
-    }
-
-		@include media("<tablet") {
-			padding: 5px 10px;
-			font-size: $size-xs;
-		}
-	}
+	max-width: 600px;
+	margin: 0 auto;
 
 	input[type="text"] {
-		flex-grow: 1;
+		flex: 1 0 auto;
 		border-radius: 5px 0 0 5px;
 		background: transparent;
 
@@ -547,30 +451,87 @@ main {
 
 	input[type="submit"] {
 		border-radius: 0 5px 5px 0;
-		flex-shrink: 0;
+		flex: 0 0 auto;
+	}
+}
+
+.form__input {
+	padding: 5px 10px;
+	font-size: $size-xs;
+
+	background: transparent;
+	border: solid 2px currentColor;
+	border-right: transparent;
+	color: $primary;
+
+	@supports not (border-right: $primary) {
+		border-right: solid 2px;
 	}
 
-	&__btn {
-		padding: 5px 15px;
-		text-transform: capitalize;
-		margin: 0;
-		color: $primary;
-		border: solid 2px currentColor;
-		background-color: transparent;
-		font-family: "robotoMedium";
-		transition: .3s all ease-in-out;
+	@include media(">=tablet") {
+		padding: 10px 20px;
+		font-size: $size-l;
+	}
+}
 
-		&:hover,
-		&:focus,
-		&.btn_active {
-			background-color: $info;
-			border-color: $info;
-      padding: 5px 15px;
-		}
+.contact-box__community {
+	margin-bottom: 30px;
 
-		@include media("<tablet") {
-			font-size: $size-xs;
-		}
+	@include media(">=tablet") {
+		margin-bottom: 0;
+	}
+}
+
+.contact-community__item {
+	position: relative;
+	font-size: 16px;
+}
+
+.contact-community__link {
+	margin-left: 20px;
+	color: $primary;
+	transition: color ease .3s;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $info;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		border-top: 4px solid transparent;
+		border-left: 6px solid $primary;
+		border-bottom: 4px solid transparent;
+
+		transition: border-left-color .3s;
+	}
+
+	&:hover:before {
+		border-left-color: $info;
+	}
+}
+
+.contact-list__term {
+	text-transform: capitalize;
+	font-family: "robotoBold";
+}
+
+.contact-list__description {
+	margin-left: 0;
+}
+
+.contact-list__link {
+	color: $base-text-color;
+
+	transition: color .3s;
+
+	&:hover {
+		color: $info;
 	}
 }
 
@@ -579,179 +540,159 @@ main {
 	background-color: $accent-dark;
 	padding: 20px 0;
   flex: 0 0 auto;
+}
 
-	&-wrap {
+.footer-wrap {
+	display: block;
+	text-align: center;
+
+	@include media(">=phone") {
 		display: flex;
 		justify-content: space-between;
-		flex-wrap: wrap;
 		align-items: center;
-
-		@include media("<phone") {
-			display: block;
-			text-align: center;
-		}
-	}
-
-	&__list {
-		margin: 0 -10px;
-
-		font-size: 0;
-		line-height: 0;
-	}
-
-	&__item {
-		display: inline-block;
-		vertical-align: top;
-		margin: 0 10px;
-
-		font-size: 16px;
-		line-height: 1.3;
-	}
-
-	&__link {
-		display: block;
-
-		background: $primary;
-		border-radius: 50%;
-		text-align: center;
-		transition: all .3s ease-in-out;
-
-		&:hover {
-			background-color: $accent-dark;
-		}
-	}
-
-	&__text {
-		font-size: $size-xs;
-
-		@include media("<phone") {
-			margin-bottom: 20px;
-		}
-	}
-
-	.fas,
-	.fab {
-		width: 42px;
-		height: 42px;
-
-		line-height: 42px;
-		color: #20c7a1;
-    text-rendering: optimizeLegibility; //hack for the safary
-
-		&:hover {
-			color: $primary;
-		}
 	}
 }
 
+.copyright {
+	font-size: $size-xs;
+	margin-bottom: 20px;
+
+	@include media(">=phone") {
+		margin-bottom: 0;
+	}
+}
+
+.social {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.social__item {
+	margin: 0 10px;
+}
+
+.social__link {
+	display: block;
+
+	background: $primary;
+	border-radius: 50%;
+	text-align: center;
+	transition: background-color .3s;
+
+	&:hover {
+		background-color: $accent-dark;
+	}
+}
+
+.fas,
+.fab {
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+
+	color: #20c7a1;
+	text-rendering: optimizeLegibility; //hack for the safari
+	transition: color .3s;
+
+	&:hover {
+		color: $primary;
+	}
+
+	@include media(">=phone") {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
 
 
 // ------------------- styles for content.html ----------------
 .software {
 	padding-bottom: 80px;
-	font-size: $size-m;
+}
 
-	&__inner {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-between;
-	}
+.software-wrap {
 
-	p {
-		margin-bottom: 30px;
-		line-height: 2;
-	}
-
-	&__box {
-		width: 65%;
-
-		font-size: $size-m;
-		line-height: 1.3;
-
-		@include media("<desktop") {
-			display: block;
-			width: 100%;
-      font-size: $base-font-size;
-		}
-
-    @include  media("<tablet") {
-      text-align: justify;
-    }
+	@include media(">=desktop") {
+		display: flex;
+		align-items: flex-start;
 	}
 }
 
-figure {
+.software__box {
+	flex: 1 0 70%;
+}
+
+// title for javascript
+.software__title {
+	display: none;
+	vertical-align: top;
+
+	padding: 10px 30px;
+
+	background-color: $info;
+}
+//--------------------------------
+.content-header {
+	position: static;
+}
+
+.software__figure {
 	margin: 0 0 20px;
-
-	+ p {
-		margin-bottom: 50px;
-	}
-}
-
-figcaption {
 	color: $accent;
 }
 
 .aside {
-  width: 35%;
+	@include clearfix;
+
 	padding: 40px 40px;
-	margin-top: 10px;
 
 	font-size: $base-font-size;
 	line-height: 1.3;
-	color: $base-color;
 
 	background-color: $primary;
 	box-shadow: 0 2px 20px 6px rgba(#000, .3);
 
-	&__head {
-		margin-bottom: 30px;
-	}
-
-	&__title {
-		font-family: $font-Knewave;
-		font-size: 28px;
-		text-transform: uppercase;
-
-    @include media("<tablet") {
-      font-size: $size-m;
-    }
-	}
-
-	&__text {
-		position: relative;
-		padding-left: 20px;
-
-		font-size: 15px;
-		line-height: 1.3;
-
-		&:before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			width: 4px;
-			height: 100%;
-			background-color: $base-color;
-		}
-
-		p {
-			margin-bottom: 10px;
-		}
-	}
-
-	&__author {
-		float: right;
-		font-size: $size-xxs;
-		font-family: "robotoBold";
-		color: $info;
-	}
-
-	@include media("<desktop") {
-		display: block;
-		width: 100%;
-		position: static;
+	@include media(">=tablet") {
+		flex: 0 0 30%;
+		margin-top: 10px;
+		position: sticky;
+		top: 10px;
 	}
 }
+
+.aside__title {
+
+	@include media(">=tablet") {
+		font-size: $h3-basic-font-size;
+	}
+}
+
+.aside__text {
+	position: relative;
+	padding-left: 20px;
+	margin-bottom: 10px;
+
+	font-size: 15px;
+	line-height: 1.3;
+	color: $base-color;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 4px;
+		height: 100%;
+		background-color: $base-color;
+	}
+}
+
+.aside__author {
+	float: right;
+}
+
+
+

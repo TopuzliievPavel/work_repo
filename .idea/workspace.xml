@@ -4,44 +4,15 @@
     <list default="true" id="2a568444-8216-4c65-93b2-5fc7b97483fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoBlack/RobotoBlack.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoBlack/RobotoBlack.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoBlackItalic/Roboto-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoBlackItalic/RobotoBlackItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoBold/RobotoBold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoBold/RobotoBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoBold/roboto-bold-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoBoldItalic/RobotoBoldItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoBoldItalic/RobotoBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoItalic/RobotoItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoItalic/RobotoItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoLight/RobotoLight.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoLight/RobotoLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoLightItalic/RobotoLightItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoLightItalic/RobotoLightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoMedium/RobotoMedium.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoMedium/RobotoMedium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoMediumItalic/RobotoMediumItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoMediumItalic/RobotoMediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoRegular/RobotoRegular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoRegular/RobotoRegular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoThin/RobotoThin.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoThin/RobotoThin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoThinItalic/RobotoThinItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/Roboto/RobotoThinItalic/RobotoThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ht.access" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/scripts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/scss/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_heading-styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_libs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_normalize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_normalize.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_reset.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/_mixins/_font-face.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_mixins/_font-face.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/_mixins/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_mixins/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/scss/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_typography.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/scss/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/_vars.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,14 +24,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.4483373">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-242">
-                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+                <state relative-caret-position="89">
+                  <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -68,8 +39,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/content.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+                <state relative-caret-position="660">
+                  <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
                 </state>
               </provider>
             </entry>
@@ -77,24 +48,30 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/scss/main.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
-                  <folding>
-                    <marker date="1561476926707" expanded="true" signature="9780:9794" ph="..." />
-                  </folding>
+                <state relative-caret-position="507">
+                  <caret line="222" column="31" lean-forward="true" selection-start-line="222" selection-start-column="31" selection-end-line="222" selection-end-column="31" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/scss/_normalize.scss">
+            <entry file="file://$PROJECT_DIR$/app/scss/_mixins/_mixins.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+                <state relative-caret-position="617">
+                  <caret line="308" column="27" lean-forward="true" selection-start-line="308" selection-start-column="27" selection-end-line="308" selection-end-column="27" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/gulpfile.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="550">
+                  <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -102,8 +79,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scss/_vars.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+                <state relative-caret-position="352">
+                  <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -111,8 +88,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scss/_typography.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="419">
-                  <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="32" />
+                <state relative-caret-position="353">
+                  <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -125,7 +102,6 @@
     <findStrings>
       <find>menu</find>
       <find>h2</find>
-      <find>btn</find>
       <find>abo</find>
       <find>img</find>
       <find>$base</find>
@@ -135,6 +111,11 @@
       <find>content__inner</find>
       <find>a</find>
       <find>butt</find>
+      <find>color: inherit;</find>
+      <find>btn</find>
+      <find>bu</find>
+      <find>figcaption</find>
+      <find>visual</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,22 +130,23 @@
         <option value="D:/work/escape/js/main.js" />
         <option value="$PROJECT_DIR$/app/scss/fontawesome.scss" />
         <option value="$PROJECT_DIR$/app/scss/_icons.scss" />
-        <option value="$PROJECT_DIR$/app/scss/_mixins/_mixins.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/app/js/common.js" />
         <option value="$PROJECT_DIR$/app/scss/_reset.scss" />
         <option value="$PROJECT_DIR$/app/scss/_media.scss" />
         <option value="$PROJECT_DIR$/app/scss/_heading-styles.scss" />
         <option value="$PROJECT_DIR$/../../Fonts/Knewave/stylesheet.css" />
         <option value="$PROJECT_DIR$/app/fonts/Knewave/stylesheet.css" />
-        <option value="$PROJECT_DIR$/app/scss/_fonts.scss" />
         <option value="$PROJECT_DIR$/app/scss/_include-media.scss" />
+        <option value="$PROJECT_DIR$/app/scss/_normalize.scss" />
+        <option value="$PROJECT_DIR$/app/js/common.js" />
+        <option value="$PROJECT_DIR$/app/scss/_mixins/_font-face.scss" />
+        <option value="$PROJECT_DIR$/app/scss/_fonts.scss" />
         <option value="$PROJECT_DIR$/app/scss/_vars.scss" />
         <option value="$PROJECT_DIR$/app/content.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/scss/_normalize.scss" />
         <option value="$PROJECT_DIR$/app/scss/_typography.scss" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/app/scss/_mixins/_mixins.scss" />
         <option value="$PROJECT_DIR$/app/scss/main.scss" />
       </list>
     </option>
@@ -193,6 +175,12 @@
               <item name="train" type="b2602c69:ProjectViewProjectNode" />
               <item name="train" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="train" type="b2602c69:ProjectViewProjectNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="train" type="b2602c69:ProjectViewProjectNode" />
@@ -256,11 +244,12 @@
       <workItem from="1561129434119" duration="1885000" />
       <workItem from="1561376943820" duration="12062000" />
       <workItem from="1561439581674" duration="33561000" />
+      <workItem from="1561537447573" duration="29567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103822000" />
+    <option name="totallyTimeSpent" value="133389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -305,13 +294,6 @@
     <entry file="file://$PROJECT_DIR$/../../Fonts/fontawesome-free-5.9.0-web/scss/_list.scss" />
     <entry file="file://$PROJECT_DIR$/app/scss/fontawesome.scss" />
     <entry file="file://$PROJECT_DIR$/app/scss/_icons.scss" />
-    <entry file="file://$PROJECT_DIR$/app/scss/_mixins/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="228" column="17" lean-forward="true" selection-start-line="228" selection-start-column="17" selection-end-line="228" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/work/escape/index.html" />
     <entry file="file://D:/work/shopno/index.html" />
     <entry file="file://D:/work/escape/scss/main.scss" />
@@ -343,16 +325,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/main.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/main.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="64525" selection-start-column="64525" selection-end-column="64525" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/main.css" />
     <entry file="file://$PROJECT_DIR$/../example/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1386">
@@ -360,24 +333,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -432,13 +391,7 @@
     <entry file="file://$PROJECT_DIR$/../../gulp/gulpAssembly/gulp-scss-starter/src/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/_libs.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/_libs.scss" />
     <entry file="file://$PROJECT_DIR$/app/scss/_media.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -453,34 +406,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Fonts/Knewave/specimen_files/grid_12-825-55-15.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Fonts/Knewave/specimen_files/specimen_stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1078">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Fonts/Knewave/knewave-regular-demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Fonts/Knewave/specimen_files/grid_12-825-55-15.css" />
+    <entry file="file://$PROJECT_DIR$/../../Fonts/Knewave/specimen_files/specimen_stylesheet.css" />
+    <entry file="file://$PROJECT_DIR$/../../Fonts/Knewave/knewave-regular-demo.html" />
     <entry file="file://$PROJECT_DIR$/../../Fonts/Knewave/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/_mixins/_font-face.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -498,62 +430,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/_reset.scss" />
+    <entry file="file://$PROJECT_DIR$/app/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/_mixins/_font-face.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/_fonts.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/_reset.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="176">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/_vars.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="352">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/_normalize.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="-392">
+          <caret line="76" column="12" lean-forward="true" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/_typography.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="353">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/main.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7255" lean-forward="true" selection-start-column="7255" selection-end-column="7255" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/_mixins/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="308" column="27" lean-forward="true" selection-start-line="308" selection-start-column="27" selection-end-line="308" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
-          <folding>
-            <marker date="1561476926707" expanded="true" signature="9780:9794" ph="..." />
-          </folding>
+        <state relative-caret-position="507">
+          <caret line="222" column="31" lean-forward="true" selection-start-line="222" selection-start-column="31" selection-end-line="222" selection-end-column="31" />
         </state>
       </provider>
     </entry>
