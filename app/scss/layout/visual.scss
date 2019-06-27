@@ -1,0 +1,109 @@
+// ----------------	visual ---------------
+.visual {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 100vh;
+  background: url("../../img/_src/slide.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.3;
+  color: $base-color;
+
+  @include media(">=tablet") {
+    font-size: $size-m;
+  }
+
+  @include media(">=desktop") {
+    font-size: $size-l;
+  }
+
+  @include media(">=widescreen") {
+    font-size: $size-xl;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $dark-color;
+    opacity: .4;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  @supports not (display: flex) {
+  	display: block;
+    min-height: 100vh;
+    white-space: nowrap;
+    width: 100%;
+    padding: 115px 0;
+    background-color: $visual-bg;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      min-height: calc(100vh - 230px);
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    > * {
+      white-space: normal;
+    }
+
+    .visual__inner {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+  }
+}
+
+//@supports not (display: flex) {
+//	.visual {
+//		display: block;
+//	}
+//}
+
+.visual__inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 15px;
+  z-index: 1;
+}
+
+.visual__title {
+  font-size: 34px;
+
+  @include media(">=desktop") {
+    font-size: 44px;
+  }
+
+  @include media(">=widescreen") {
+    font-size: $h2-basic-font-size;
+  }
+}
+
+.visual__btn {
+  width: 100%;
+
+  @include media(">=tablet") {
+    width: auto;
+    margin: 0 5px;
+  }
+}

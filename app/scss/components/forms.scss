@@ -1,0 +1,46 @@
+// Forms
+.form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+
+  input[type="text"] {
+    flex: 1 0 auto;
+    border-radius: 5px 0 0 5px;
+    background: transparent;
+
+    &::placeholder {
+      color: $primary;
+    }
+
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  input[type="submit"] {
+    border-radius: 0 5px 5px 0;
+    flex: 0 0 auto;
+  }
+}
+
+.form__input {
+  padding: 5px 10px;
+  font-size: $size-xs;
+
+  background: transparent;
+  border: solid 2px currentColor;
+  border-right: transparent;
+  color: $primary;
+
+  @supports not (border-right: $primary) {
+    border-right: solid 2px;
+  }
+
+  @include media(">=tablet") {
+    padding: 10px 20px;
+    font-size: $size-l;
+  }
+}

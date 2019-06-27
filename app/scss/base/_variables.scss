@@ -27,14 +27,17 @@ $base-line-height: 2;
 $base-min-width: 320px;
 
 // Links styles
-$base-link-color: $base-color;
-$base-hover-link: #e84545;
+$base-link-color: $primary;
 
 // Buttons styles
 $btn-color: $base-color;
 $btn-background: $base-color;
-$btn-padding: 0;
-$btn-font-size: inherit;
+$btn-padding: 0.4em 0.8em;
+$btn-font-size: 18px;
+
+
+
+
 
 
 

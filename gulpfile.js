@@ -76,7 +76,6 @@ gulp.task('rsync', function() {
 		}))
 });
 
-
 // Images @x1 & @x2 + Compression | Required graphicsmagick (sudo apt update; sudo apt install graphicsmagick)
 gulp.task('img1x', function() {
 	return gulp.src('app/img/_src/**/*.*')

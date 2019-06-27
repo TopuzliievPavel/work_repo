@@ -1,3 +1,16 @@
+// Fonts
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $font-family;
+		font-weight: $weight;
+		font-style: $style;
+
+		src: url('#{$file-path}.woff2') format('woff2'),
+		url('#{$file-path}.woff') format('woff');
+	}
+}
+
+
 // vertical align el inside parent with fixed height/min-height
 // usage
 // html - .parent>.child
@@ -310,3 +323,6 @@ $easing-default: linear;
 		$prop: $val;
 	}
 }
+
+
+

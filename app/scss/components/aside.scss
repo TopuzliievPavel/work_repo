@@ -1,0 +1,50 @@
+// aside content
+.aside {
+  @include clearfix;
+
+  padding: 40px 40px;
+
+  font-size: $base-font-size;
+  line-height: 1.3;
+
+  background-color: $primary;
+  box-shadow: 0 2px 20px 6px rgba(#000, .3);
+
+  @include media(">=tablet") {
+    flex: 0 0 30%;
+    margin-top: 10px;
+    position: sticky;
+    top: 10px;
+  }
+}
+
+.aside__title {
+
+  @include media(">=tablet") {
+    font-size: $h3-basic-font-size;
+  }
+}
+
+.aside__text {
+  position: relative;
+  padding-left: 20px;
+
+  font-size: 15px;
+  line-height: 1.3;
+  color: $base-color;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: $base-color;
+  }
+}
+
+.aside__author {
+  float: right;
+}

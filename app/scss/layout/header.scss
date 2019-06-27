@@ -1,0 +1,76 @@
+// header
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: $accent;
+
+  @include media(">=tablet") {
+    padding: 0 50px;
+  }
+}
+
+.logo {
+  a {
+    display: block;
+  }
+}
+
+.menu {
+  text-align: center;
+
+  @include media(">=tablet") {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu__item {
+  padding: 15px 0;
+  font-size: $size-m;
+  text-transform: capitalize;
+  color: $base-color;
+
+  @include media (">=tablet") {
+    font-size: $size-l;
+    color: $primary;
+    padding: 15px 10px;
+  }
+}
+
+.menu__item_active {
+  color: $danger;
+}
+
+.menu__link {
+  color: inherit;
+  transition: color .3s;
+  display: block;
+}
+
+.nav {
+  top: 83px;
+  width: 100%;
+  right: 100%;
+  position: absolute;
+  background-color: #000;
+  transition: right .3s;
+  height: 100vh;
+
+  .menu-active & {
+    opacity: .9;
+    right: 0;
+  }
+
+  @include media(">=tablet") {
+    position: static;
+    height: auto;
+    background-color: transparent;
+  }
+}
