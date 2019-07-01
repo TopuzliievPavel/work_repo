@@ -1,7 +1,11 @@
+@import "../base/include-media";
+@import "../base/variables";
+@import "../vendors/typography";
+
 // --------------- about -----------------`
 .about {
   background-color: $primary;
-  padding: 20px 0 20px;
+  padding: 30px 0 30px;
 
   @include media(">=widescreen") {
     padding: 40px 0 80px;
@@ -22,33 +26,41 @@
 }
 
 .about__list {
-  @include media(">=tablet") {
+  @include media(">=desktop") {
     display: flex;
-    flex-wrap: wrap;
   }
 }
 
 .about-info {
-  margin-bottom: 50px;
   text-align: center;
+  line-height: $base-line-height;
+  font-size: 16px;
+  margin-bottom: 50px;
 
   @include media(">=tablet") {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding: 0 20px;
+  }
+
+  @include media(">=desktop") {
+    width: 25%;
+    padding: 0 10px;
   }
 
   @include media(">=widescreen") {
     width: 25%;
+    padding: 0 20px;
     margin-bottom: 0;
   }
 }
 
 .about-info__text {
-  flex: 1 0 auto;
   font-size: 16px;
   color: $base-color;
+
+  @include media(">=tablet") {
+    flex: 1 0 auto;
+  }
 }
 
 .about-info__title {
@@ -69,19 +81,18 @@
 }
 
 .about-info__img {
-  min-height: 135px;
   margin-bottom: 20px;
 
   @include media(">=tablet") {
     margin-bottom: 40px;
+    min-height: 145px;
   }
 }
 
-.about-info__btn {
-  flex: 0 0 auto;
-
+.about-info__link {
   @include media(">=tablet") {
     margin: 0 15%;
+    flex: 0 0 auto;
   }
 }
 
@@ -92,31 +103,33 @@
 }
 
 .contact-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+  @include media(">=desktop") {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .contact-box {
   margin-bottom: 30px;
-  width: 100%;
-  text-align: center;
 
   @include media(">=desktop") {
     width: 50%;
-    text-align: left;
     margin-bottom: 0;
   }
 }
 
 .contact-box_modify {
-  text-align: left;
   margin-bottom: 0;
 
-  @media screen and ("min-width: 525px") {
+  @include media(">=desktop") {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    @supports (justify-content: space-between) {
+      justify-content: space-around;
+    }
   }
 }
 
@@ -136,6 +149,11 @@
   }
 }
 
+.contact-list,
+.contact-list__description {
+  margin: 0;
+}
+
 .contact-community__item {
   position: relative;
   font-size: 16px;
@@ -145,13 +163,11 @@
   margin-left: 20px;
   color: $primary;
   transition: color ease .3s;
-
   &:hover,
   &:focus,
   &:active {
     color: $info;
   }
-
   &:before {
     content: "";
     position: absolute;
@@ -161,10 +177,8 @@
     border-top: 4px solid transparent;
     border-left: 6px solid $primary;
     border-bottom: 4px solid transparent;
-
     transition: border-left-color .3s;
   }
-
   &:hover:before {
     border-left-color: $info;
   }
@@ -172,16 +186,11 @@
 
 .contact-list__term {
   text-transform: capitalize;
-  font-family: "robotoBold";
-}
-
-.contact-list__description {
-  margin-left: 0;
+  font-family: "robotoBold", sans-serif;
 }
 
 .contact-list__link {
   color: $base-text-color;
-
   transition: color .3s;
 
   &:hover {

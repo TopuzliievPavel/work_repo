@@ -1,3 +1,8 @@
+@import "../base/include-media";
+@import "../base/variables";
+@import "../base/mixins";
+@import "../vendors/typography";
+
 // aside content
 .aside {
   @include clearfix;

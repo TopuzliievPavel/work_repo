@@ -1,3 +1,6 @@
+@import "../base/include-media";
+@import "../base/variables";
+
 // Content-article
 .software {
   padding-bottom: 80px;
@@ -9,6 +12,10 @@
     display: flex;
     align-items: flex-start;
   }
+}
+
+.content-header {
+  position: static;
 }
 
 .software__box {
@@ -25,10 +32,6 @@
   background-color: $info;
 }
 //--------------------------------
-.content-header {
-  position: static;
-}
-
 .software__figure {
   margin: 0 0 20px;
   line-height: 1.3;

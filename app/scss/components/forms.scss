@@ -1,46 +1,60 @@
-// Forms
+@import "../base/include-media";
+@import "../base/variables";
+
+ //Forms
 .form {
-  display: flex;
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 0;
+  line-height: 0;
 
-  input[type="text"] {
-    flex: 1 0 auto;
-    border-radius: 5px 0 0 5px;
-    background: transparent;
-
-    &::placeholder {
-      color: $primary;
-    }
-
-    &:focus {
-      &::placeholder {
-        color: transparent;
-      }
-    }
-  }
-
-  input[type="submit"] {
-    border-radius: 0 5px 5px 0;
-    flex: 0 0 auto;
+  @supports (display: flex) {
+    display: flex;
   }
 }
 
-.form__input {
-  padding: 5px 10px;
-  font-size: $size-xs;
+
+input.form__input {
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+  padding: $btn-padding;
 
   background: transparent;
   border: solid 2px currentColor;
   border-right: transparent;
   color: $primary;
+  font-size: $size-xs;
+  line-height: 1.3;
 
-  @supports not (border-right: $primary) {
-    border-right: solid 2px;
+  @supports (flex: auto) {
+    flex: 1 0 80%;
+  }
+
+  border-radius: 5px 0 0 5px;
+
+  &::placeholder {
+    color: $primary;
+  }
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
   }
 
   @include media(">=tablet") {
-    padding: 10px 20px;
+    font-size: $size-l;
+  }
+}
+
+input.form__btn {
+  display: inline-block;
+  vertical-align: top;
+  flex: 0 0 auto;
+  border-radius: 0 5px 5px 0;
+  font-size: $size-xs;
+  padding: $btn-padding;
+
+  @include media(">=tablet") {
     font-size: $size-l;
   }
 }

@@ -1,13 +1,18 @@
+@import "../base/include-media";
+@import "../base/variables";
+@import "../vendors/typography";
+
 // ----------------	visual ---------------
 .visual {
   display: flex;
   position: relative;
   align-items: center;
-  min-height: 100vh;
-  background: url("../../img/_src/slide.jpg");
+  height: 100vh;
+  background: url("../img/_src/slide.jpg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  box-shadow: 0 10px 40px rgba(0,0,0,.5);
 
   text-align: center;
   font-size: 16px;
@@ -41,44 +46,8 @@
   p {
     margin-bottom: 40px;
   }
-
-  @supports not (display: flex) {
-  	display: block;
-    min-height: 100vh;
-    white-space: nowrap;
-    width: 100%;
-    padding: 115px 0;
-    background-color: $visual-bg;
-    overflow: hidden;
-
-    &:before {
-      content: "";
-      min-height: calc(100vh - 230px);
-      display: inline-block;
-      vertical-align: middle;
-      width: 0;
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    > * {
-      white-space: normal;
-    }
-
-    .visual__inner {
-      display: inline-block;
-      vertical-align: middle;
-      width: 100%;
-    }
-
-  }
 }
 
-//@supports not (display: flex) {
-//	.visual {
-//		display: block;
-//	}
-//}
 
 .visual__inner {
   max-width: 700px;
@@ -96,14 +65,5 @@
 
   @include media(">=widescreen") {
     font-size: $h2-basic-font-size;
-  }
-}
-
-.visual__btn {
-  width: 100%;
-
-  @include media(">=tablet") {
-    width: auto;
-    margin: 0 5px;
   }
 }
