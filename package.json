@@ -27,6 +27,7 @@
 		"gulp-util": "^3.0.8"
 	},
 	"dependencies": {
+		"gulp-rimraf": "^0.2.2",
 		"imagemin-pngquant": "^8.0.0"
 	}
 }

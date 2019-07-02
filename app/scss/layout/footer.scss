@@ -8,21 +8,18 @@
 }
 
 .footer-wrap {
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
   font-size: $size-xs;
 
   @include media(">=phone") {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 }
 
 .copyright {
-  margin-bottom: 20px;
-
-  @include media(">=phone") {
-    margin-bottom: 0;
-  }
+  margin-bottom: 0;
 }

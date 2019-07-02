@@ -22,7 +22,7 @@
 
 	<!--	Scripts Start  -->
 	<script src="libs/jquery/dist/jquery.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/scripts.min.js"></script>
 	<!--	Scripts End  -->
 
 </head>
@@ -77,8 +77,10 @@
 			<div class="container">
 				<h2 class="about__title">Some title</h2>
 
-				<ul class="about__list">
-					<li class="about-info">
+
+
+				<div class="about__list">
+					<div class="about-info">
 						<div class="about-info__img">
 							<img src="img/_src/service01.png" alt="service">
 						</div>
@@ -90,8 +92,8 @@
 						<a href="#" class="link about-info__link">
 							Meer informatie
 						</a>
-					</li>
-					<li class="about-info">
+					</div>
+					<div class="about-info">
 						<div class="about-info__img">
 							<img src="img/_src/service02.png" alt="service">
 						</div>
@@ -103,8 +105,8 @@
 						<a href="#" class="link about-info__link">
 							Meer informatie
 						</a>
-					</li>
-					<li class="about-info">
+					</div>
+					<div class="about-info">
 						<div class="about-info__img">
 							<img src="img/_src/service03.png" alt="service">
 						</div>
@@ -115,8 +117,8 @@
 						<a href="#" class="link about-info__link">
 							Meer informatie
 						</a>
-					</li>
-					<li class="about-info">
+					</div>
+					<div class="about-info">
 						<div class="about-info__img">
 							<img src="img/_src/service04.png" alt="service">
 						</div>
@@ -128,8 +130,8 @@
 						<a href="#" class="link about-info__link">
 							Meer informatie
 						</a>
-					</li>
-				</ul>
+					</div>
+				</div>
 
 			</div>
 		</section>
@@ -140,7 +142,7 @@
 				<div class="contact-box">
 					<h6 class="contact-box__title">Text in the input must be show in the content 							page
 					</h6>
-					<form name="contact-form" action="#" class="form">
+					<form name="contact-form" action="/" class="form">
 						<input type="text" class="form__input" placeholder="Some text">
 						<input onclick="initText()" type="submit" class="btn form__btn btn_active" value="Send">
 					</form>
@@ -182,29 +184,26 @@
 
 			</div>
 
-
 		</section>
-
-
 
 	</main>
 
 	<footer class="footer">
 		<div class="footer-wrap container">
 			<p class="copyright">Some long text about copyright</p>
-			<ul class="social">
-				<li class="social__item">
-					<a href="https://twitter.com/?lang=ru" class="social__link">
+			<ul class="socials">
+				<li class="socials__item">
+					<a href="https://twitter.com/?lang=ru" class="socials__link">
 						<i class="icon icon-twitter-logo"></i>
 					</a>
 				</li>
-				<li class="social__item">
-					<a href="https://uk-ua.facebook.com/" class="social__link">
+				<li class="socials__item">
+					<a href="https://uk-ua.facebook.com/" class="socials__link">
 						<i class="icon icon-facebook-logo"></i>
 					</a>
 				</li>
-				<li class="social__item">
-					<a href="https://www.youtube.com/" class="social__link">
+				<li class="socials__item">
+					<a href="https://www.youtube.com/" class="socials__link">
 						<i class="icon icon-button-play"></i>
 					</a>
 				</li>

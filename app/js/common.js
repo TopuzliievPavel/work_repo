@@ -43,7 +43,6 @@ function initText() {
   }
 }
 
-
 // // initialize fixed blocks on scroll
 // function initStickyScrollBlock() {
 //   jQuery('.aside').stickyScrollBlock({

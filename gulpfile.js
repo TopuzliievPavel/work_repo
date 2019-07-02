@@ -14,6 +14,7 @@ var gulp          = require('gulp'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require('gulp-notify'),
 		rsync         = require('gulp-rsync'),
+		rimraf 				= require('rimraf'),
 		imageResize   = require('gulp-image-resize'),
 		imagemin      = require('gulp-imagemin'),
 		del           = require('del');
@@ -31,6 +32,11 @@ gulp.task('browser-sync', function() {
 	})
 });
 
+gulp.task('clean', function (cb) {
+	rimraf('./dist', cb);
+});
+
+
 // Sass|Scss Styles
 gulp.task('styles', function() {
 	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
@@ -38,6 +44,7 @@ gulp.task('styles', function() {
 		.pipe(rename({ suffix: '.min', prefix : '' }))
 		.pipe(autoprefixer(['last 15 versions']))
 		.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+		.pipe(concat('main.min.css'))
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.stream())
 });

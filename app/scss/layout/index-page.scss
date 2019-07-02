@@ -26,8 +26,10 @@
 }
 
 .about__list {
-  @include media(">=desktop") {
+
+  @include media(">=tablet") {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -40,17 +42,15 @@
   @include media(">=tablet") {
     display: flex;
     flex-direction: column;
+    width: 50%;
+    padding: 0 10px;
+    justify-content: space-between;
   }
 
   @include media(">=desktop") {
-    width: 25%;
-    padding: 0 10px;
-  }
-
-  @include media(">=widescreen") {
-    width: 25%;
-    padding: 0 20px;
     margin-bottom: 0;
+    padding-right: 0 20px;
+    width: 25%;
   }
 }
 
@@ -70,7 +70,7 @@
   &:after {
     content: "";
     position: absolute;
-    width: 65%;
+    width: 40%;
     height: 2px;
     left: 50%;
     bottom: 0;
@@ -90,9 +90,10 @@
 }
 
 .about-info__link {
+  padding: 10px 0;
+
   @include media(">=tablet") {
     margin: 0 15%;
-    flex: 0 0 auto;
   }
 }
 
@@ -103,8 +104,7 @@
 }
 
 .contact-wrap {
-
-  @include media(">=desktop") {
+  @include media(">=tablet") {
     display: flex;
     flex-wrap: wrap;
   }
@@ -112,6 +112,7 @@
 
 .contact-box {
   margin-bottom: 30px;
+  width: 100%;
 
   @include media(">=desktop") {
     width: 50%;
@@ -122,14 +123,10 @@
 .contact-box_modify {
   margin-bottom: 0;
 
-  @include media(">=desktop") {
+  @include media(">=tablet") {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
-    @supports (justify-content: space-between) {
-      justify-content: space-around;
-    }
+    justify-content: space-around;
   }
 }
 

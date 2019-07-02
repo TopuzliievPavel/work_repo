@@ -95,7 +95,8 @@ a, a:hover {
  */
 
 a:active,
-a:hover {
+a:hover,
+a:focus {
   outline: 0;
 }
 

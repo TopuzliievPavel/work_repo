@@ -1,17 +1,17 @@
 @import "../base/variables";
 
 // Social links
-.social {
+.socials {
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
-.social__item {
+.socials__item {
   margin: 0 10px;
 }
 
-.social__link {
+.socials__link {
   display: block;
 
   background: $primary;

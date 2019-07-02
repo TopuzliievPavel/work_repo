@@ -1,1 +1,40 @@
-// ------------------- content page ----------------
+@import "../base/include-media";
+@import "../base/variables";
+
+// Content-article
+.software {
+  padding-bottom: 80px;
+}
+
+.software-wrap {
+
+  @include media(">=desktop") {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.software__box {
+  flex: 1 0 70%;
+}
+
+.aside {
+  flex: 0 0 30%;
+}
+
+.software__figure {
+  margin: 0 0 20px;
+  line-height: 1.3;
+  color: $accent;
+}
+
+// title for javascript
+.software__title {
+  display: none;
+  vertical-align: top;
+
+  padding: 10px 30px;
+
+  background-color: $info;
+}
+//--------------------------------
