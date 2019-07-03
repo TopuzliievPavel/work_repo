@@ -2,9 +2,7 @@
 
 // Social links
 .socials {
-  text-align: center;
   display: flex;
-  justify-content: center;
 }
 
 .socials__item {
@@ -16,7 +14,6 @@
 
   background: $primary;
   border-radius: 50%;
-  text-align: center;
   transition: background-color .3s;
 
   &:hover {
@@ -31,9 +28,7 @@
   width: 42px;
   height: 42px;
 
-  line-height: 42px;
-
-  color: #20c7a1;
+  color: $accent-dark;
   text-rendering: optimizeLegibility; //hack for the safari
   transition: color .3s;
 

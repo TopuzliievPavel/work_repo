@@ -36,7 +36,6 @@ gulp.task('clean', function (cb) {
 	rimraf('./dist', cb);
 });
 
-
 // Sass|Scss Styles
 gulp.task('styles', function() {
 	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')

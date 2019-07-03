@@ -59,6 +59,12 @@
   color: inherit;
   transition: color .3s;
   display: block;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $danger;
+  }
 }
 
 .nav {

@@ -26,7 +26,6 @@
 }
 
 .about__list {
-
   @include media(">=tablet") {
     display: flex;
     flex-wrap: wrap;
@@ -42,15 +41,16 @@
   @include media(">=tablet") {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding: 0 10px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 2%;
     justify-content: space-between;
   }
 
-  @include media(">=desktop") {
+  @include media(">=widescreen") {
     margin-bottom: 0;
-    padding-right: 0 20px;
-    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 }
 
@@ -75,7 +75,6 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-
     background-color: $accent;
   }
 }
@@ -85,15 +84,7 @@
 
   @include media(">=tablet") {
     margin-bottom: 40px;
-    min-height: 145px;
-  }
-}
-
-.about-info__link {
-  padding: 10px 0;
-
-  @include media(">=tablet") {
-    margin: 0 15%;
+    min-height: 135px;
   }
 }
 
@@ -157,14 +148,9 @@
 }
 
 .contact-community__link {
-  margin-left: 20px;
-  color: $primary;
+  padding-left: 20px;
   transition: color ease .3s;
-  &:hover,
-  &:focus,
-  &:active {
-    color: $info;
-  }
+
   &:before {
     content: "";
     position: absolute;
@@ -174,6 +160,7 @@
     border-top: 4px solid transparent;
     border-left: 6px solid $primary;
     border-bottom: 4px solid transparent;
+
     transition: border-left-color .3s;
   }
   &:hover:before {
@@ -186,11 +173,13 @@
   font-family: "robotoBold", sans-serif;
 }
 
+.contact-community__link,
 .contact-list__link {
-  color: $base-text-color;
   transition: color .3s;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: $info;
   }
 }

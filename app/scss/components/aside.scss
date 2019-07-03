@@ -4,10 +4,11 @@
 @import "../vendors/typography";
 
 // aside content
-.aside {
+
+.aside_widget {
   @include clearfix;
 
-  padding: 40px 40px;
+  padding: 30px;
 
   font-size: $base-font-size;
   line-height: 1.3;
@@ -15,28 +16,40 @@
   background-color: $primary;
   box-shadow: 0 2px 20px 6px rgba(#000, .3);
 
-  @include media(">=tablet") {
-    flex: 0 0 30%;
-    margin-top: 10px;
-    position: sticky;
-    top: 10px;
+  @include media(">=desktop") {
+    position: fixed;
+    width: 37%;
+    right: 15px;
+    @supports (position: sticky) {
+      position: sticky;
+      top: 10px;
+      width: 100%;
+    }
+  }
+  @include media(">=widescreen") {
+    width: 321px;
+    right: calc((100vw - 1170px)/2);
+    @supports (position: sticky) {
+      width: 100%;
+    }
   }
 }
 
 .aside__title {
-
   @include media(">=tablet") {
     font-size: $h3-basic-font-size;
   }
 }
 
 .aside__text {
-  position: relative;
-  padding-left: 20px;
-
   font-size: 15px;
   line-height: 1.3;
   color: $base-color;
+}
+
+.aside__text-wrap {
+  position: relative;
+  padding-left: 20px;
 
   &:before {
     content: "";
@@ -51,5 +64,6 @@
 }
 
 .aside__author {
-  float: right;
+  display: flex;
+  justify-content: flex-end;
 }

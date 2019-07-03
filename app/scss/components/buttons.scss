@@ -42,16 +42,6 @@
   }
 }
 
-.visual__btn,
-.visual__link {
-   width: 100%;
-
-   @include media(">=tablet") {
-     width: auto;
-     margin: 0 5px;
-   }
- }
-
 // header menu button
 .menu-open {
   display: block;

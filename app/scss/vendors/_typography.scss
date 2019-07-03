@@ -80,11 +80,6 @@ p {
 
 a {
   color: $base-link-color;
-
-  &:hover,
-  &:focus {
-    color: $danger;
-  }
 }
 
 cite {
