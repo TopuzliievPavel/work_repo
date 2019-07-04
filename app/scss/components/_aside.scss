@@ -1,16 +1,9 @@
-@import "../base/include-media";
-@import "../base/variables";
-@import "../base/mixins";
-@import "../vendors/typography";
-
-// aside content
+// Aside content
 
 .aside_widget {
-  @include clearfix;
-
   padding: 30px;
 
-  font-size: $base-font-size;
+  font-size: 15px;
   line-height: 1.3;
 
   background-color: $primary;
@@ -20,6 +13,7 @@
     position: fixed;
     width: 37%;
     right: 15px;
+
     @supports (position: sticky) {
       position: sticky;
       top: 10px;
@@ -35,15 +29,7 @@
   }
 }
 
-.aside__title {
-  @include media(">=tablet") {
-    font-size: $h3-basic-font-size;
-  }
-}
-
 .aside__text {
-  font-size: 15px;
-  line-height: 1.3;
   color: $base-color;
 }
 

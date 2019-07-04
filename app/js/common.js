@@ -1,8 +1,6 @@
 jQuery(function(){
   initMenu();
-  linkDown();
   // initText();
-  // initStickyScrollBlock();
 });
 
 function initMenu() {
@@ -17,24 +15,9 @@ function initMenu() {
   opener.on("click", clickHandler);
 }
 
-//  link down
-function linkDown() {
-  $(".nav a").on("click", function(e) {
-    if(this.hash !== "") {
-      e.preventDefault();
-
-      const hash = this.hash;
-
-      $("html, body").animate({
-        scrollTop: $(hash).offset().top
-      }, 1000);
-    }
-  });
-}
-
 // Add input text
 function initText() {
-  const heading         = document.getElementsByClassName("software__title")[0],
+  const heading          = document.getElementsByClassName("software__title")[0],
         textInput        = document.getElementsByClassName("form__input")[0],
         textInputValue   = textInput.value;
 

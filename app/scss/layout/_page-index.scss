@@ -1,11 +1,9 @@
-@import "../base/include-media";
-@import "../base/variables";
-@import "../vendors/typography";
+// Page-index
 
-// --------------- about -----------------`
+// About
 .about {
   background-color: $primary;
-  padding: 30px 0 30px;
+  padding: 30px 0;
 
   @include media(">=widescreen") {
     padding: 40px 0 80px;
@@ -15,7 +13,6 @@
 .about__title {
   font-size: $size-xl;
   text-align: center;
-
   @include media(">=tablet") {
     font-size: 40px;
   }
@@ -34,23 +31,18 @@
 
 .about-info {
   text-align: center;
-  line-height: $base-line-height;
-  font-size: 16px;
   margin-bottom: 50px;
 
   @include media(">=tablet") {
     display: flex;
     flex-direction: column;
-    flex: 0 0 50%;
-    max-width: 50%;
+    width: 50%;
     padding: 0 2%;
-    justify-content: space-between;
   }
 
   @include media(">=widescreen") {
     margin-bottom: 0;
-    flex: 0 0 25%;
-    max-width: 25%;
+    width: 25%;
   }
 }
 
@@ -79,12 +71,16 @@
   }
 }
 
+.about-info__link {
+  font-size: $size-xs;
+}
+
 .about-info__img {
   margin-bottom: 20px;
 
   @include media(">=tablet") {
     margin-bottom: 40px;
-    min-height: 135px;
+    min-height: 140px;
   }
 }
 
@@ -116,12 +112,13 @@
 
   @include media(">=tablet") {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
   }
 }
 
-.contact-box__title {
+.contact-box__title,
+.box-community__title,
+.box-address__title {
   font-size: 16px;
 
   @include media(">=tablet") {
@@ -129,7 +126,7 @@
   }
 }
 
-.contact-box__community {
+.box-community {
   margin-bottom: 30px;
 
   @include media(">=tablet") {
@@ -137,19 +134,19 @@
   }
 }
 
-.contact-list,
-.contact-list__description {
+.box-address__list,
+.box-address__description {
   margin: 0;
 }
 
-.contact-community__item {
+.box-community__item {
   position: relative;
   font-size: 16px;
 }
 
-.contact-community__link {
+.box-community__link {
   padding-left: 20px;
-  transition: color ease .3s;
+  transition: color .3s;
 
   &:before {
     content: "";
@@ -163,23 +160,23 @@
 
     transition: border-left-color .3s;
   }
-  &:hover:before {
+  &:hover:before,
+  &:focus:before {
     border-left-color: $info;
   }
 }
 
-.contact-list__term {
+.box-address__term {
   text-transform: capitalize;
   font-family: "robotoBold", sans-serif;
 }
 
-.contact-community__link,
-.contact-list__link {
+.box-community__link,
+.box-address__link {
   transition: color .3s;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     color: $info;
   }
 }

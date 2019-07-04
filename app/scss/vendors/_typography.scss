@@ -34,11 +34,12 @@ h2 {
 
 h3 {
   font-size: $h3-basic-font-size;
-  color: $accent;
+  color: $base-color;
 }
 
 h4 {
   font-size: $h4-basic-font-size;
+  color: $accent;
 }
 
 h5 {
@@ -52,6 +53,7 @@ h6 {
 
 .h1 {
   font-size: $h1-basic-font-size;
+  color: $primary;
 }
 
 .h2 {
